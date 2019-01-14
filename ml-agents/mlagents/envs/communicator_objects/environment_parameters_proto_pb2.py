@@ -19,19 +19,40 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='communicator_objects',
   syntax='proto3',
   serialized_options=_b('\252\002\034MLAgents.CommunicatorObjects'),
-  serialized_pb=_b('\nEmlagents/envs/communicator_objects/environment_parameters_proto.proto\x12\x14\x63ommunicator_objects\"\x12\n\x10\x43ustomParameters\"\xf8\x01\n\x1a\x45nvironmentParametersProto\x12_\n\x10\x66loat_parameters\x18\x01 \x03(\x0b\x32\x45.communicator_objects.EnvironmentParametersProto.FloatParametersEntry\x12\x41\n\x11\x63ustom_parameters\x18\x02 \x01(\x0b\x32&.communicator_objects.CustomParameters\x1a\x36\n\x14\x46loatParametersEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x02:\x02\x38\x01\x42\x1f\xaa\x02\x1cMLAgents.CommunicatorObjectsb\x06proto3')
+  serialized_pb=_b('\nEmlagents/envs/communicator_objects/environment_parameters_proto.proto\x12\x14\x63ommunicator_objects\"(\n\x05\x43olor\x12\t\n\x01r\x18\x01 \x01(\x02\x12\t\n\x01g\x18\x02 \x01(\x02\x12\t\n\x01\x62\x18\x03 \x01(\x02\"i\n\x06\x42utton\x12*\n\x05\x63olor\x18\x01 \x01(\x0b\x32\x1b.communicator_objects.Color\x12\t\n\x01x\x18\x02 \x01(\x02\x12\t\n\x01y\x18\x03 \x01(\x02\x12\r\n\x05width\x18\x04 \x01(\x02\x12\x0e\n\x06height\x18\x05 \x01(\x02\"A\n\x10\x43ustomParameters\x12-\n\x07\x62uttons\x18\x01 \x03(\x0b\x32\x1c.communicator_objects.Button\"\xf8\x01\n\x1a\x45nvironmentParametersProto\x12_\n\x10\x66loat_parameters\x18\x01 \x03(\x0b\x32\x45.communicator_objects.EnvironmentParametersProto.FloatParametersEntry\x12\x41\n\x11\x63ustom_parameters\x18\x02 \x01(\x0b\x32&.communicator_objects.CustomParameters\x1a\x36\n\x14\x46loatParametersEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x02:\x02\x38\x01\x42\x1f\xaa\x02\x1cMLAgents.CommunicatorObjectsb\x06proto3')
 )
 
 
 
 
-_CUSTOMPARAMETERS = _descriptor.Descriptor(
-  name='CustomParameters',
-  full_name='communicator_objects.CustomParameters',
+_COLOR = _descriptor.Descriptor(
+  name='Color',
+  full_name='communicator_objects.Color',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='r', full_name='communicator_objects.Color.r', index=0,
+      number=1, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='g', full_name='communicator_objects.Color.g', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='b', full_name='communicator_objects.Color.b', index=2,
+      number=3, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -45,7 +66,97 @@ _CUSTOMPARAMETERS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=95,
-  serialized_end=113,
+  serialized_end=135,
+)
+
+
+_BUTTON = _descriptor.Descriptor(
+  name='Button',
+  full_name='communicator_objects.Button',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='color', full_name='communicator_objects.Button.color', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='x', full_name='communicator_objects.Button.x', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='y', full_name='communicator_objects.Button.y', index=2,
+      number=3, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='width', full_name='communicator_objects.Button.width', index=3,
+      number=4, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='height', full_name='communicator_objects.Button.height', index=4,
+      number=5, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=137,
+  serialized_end=242,
+)
+
+
+_CUSTOMPARAMETERS = _descriptor.Descriptor(
+  name='CustomParameters',
+  full_name='communicator_objects.CustomParameters',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='buttons', full_name='communicator_objects.CustomParameters.buttons', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=244,
+  serialized_end=309,
 )
 
 
@@ -82,8 +193,8 @@ _ENVIRONMENTPARAMETERSPROTO_FLOATPARAMETERSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=310,
-  serialized_end=364,
+  serialized_start=506,
+  serialized_end=560,
 )
 
 _ENVIRONMENTPARAMETERSPROTO = _descriptor.Descriptor(
@@ -119,16 +230,34 @@ _ENVIRONMENTPARAMETERSPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=116,
-  serialized_end=364,
+  serialized_start=312,
+  serialized_end=560,
 )
 
+_BUTTON.fields_by_name['color'].message_type = _COLOR
+_CUSTOMPARAMETERS.fields_by_name['buttons'].message_type = _BUTTON
 _ENVIRONMENTPARAMETERSPROTO_FLOATPARAMETERSENTRY.containing_type = _ENVIRONMENTPARAMETERSPROTO
 _ENVIRONMENTPARAMETERSPROTO.fields_by_name['float_parameters'].message_type = _ENVIRONMENTPARAMETERSPROTO_FLOATPARAMETERSENTRY
 _ENVIRONMENTPARAMETERSPROTO.fields_by_name['custom_parameters'].message_type = _CUSTOMPARAMETERS
+DESCRIPTOR.message_types_by_name['Color'] = _COLOR
+DESCRIPTOR.message_types_by_name['Button'] = _BUTTON
 DESCRIPTOR.message_types_by_name['CustomParameters'] = _CUSTOMPARAMETERS
 DESCRIPTOR.message_types_by_name['EnvironmentParametersProto'] = _ENVIRONMENTPARAMETERSPROTO
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+Color = _reflection.GeneratedProtocolMessageType('Color', (_message.Message,), dict(
+  DESCRIPTOR = _COLOR,
+  __module__ = 'mlagents.envs.communicator_objects.environment_parameters_proto_pb2'
+  # @@protoc_insertion_point(class_scope:communicator_objects.Color)
+  ))
+_sym_db.RegisterMessage(Color)
+
+Button = _reflection.GeneratedProtocolMessageType('Button', (_message.Message,), dict(
+  DESCRIPTOR = _BUTTON,
+  __module__ = 'mlagents.envs.communicator_objects.environment_parameters_proto_pb2'
+  # @@protoc_insertion_point(class_scope:communicator_objects.Button)
+  ))
+_sym_db.RegisterMessage(Button)
 
 CustomParameters = _reflection.GeneratedProtocolMessageType('CustomParameters', (_message.Message,), dict(
   DESCRIPTOR = _CUSTOMPARAMETERS,

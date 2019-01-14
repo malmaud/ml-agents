@@ -1,3 +1,4 @@
+#!/bin/bash
 # variables
 
 # GRPC-TOOLS required. Install with `nuget install Grpc.Tools`. 
@@ -5,6 +6,7 @@
 # For example, on macOS, you might have something like:
 # COMPILER=Grpc.Tools.1.14.1/tools/macosx_x64
 # COMPILER=[DIRECTORY]
+COMPILER=$HOME/grpc/Grpc.Tools.1.16.0/tools/macosx_x64
 
 SRC_DIR=proto/mlagents/envs/communicator_objects
 DST_DIR_C=../UnitySDK/Assets/ML-Agents/Scripts/CommunicatorObjects

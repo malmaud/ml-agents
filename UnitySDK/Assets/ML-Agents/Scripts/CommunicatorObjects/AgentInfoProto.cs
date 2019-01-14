@@ -25,20 +25,21 @@ namespace MLAgents.CommunicatorObjects {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjltbGFnZW50cy9lbnZzL2NvbW11bmljYXRvcl9vYmplY3RzL2FnZW50X2lu",
-            "Zm9fcHJvdG8ucHJvdG8SFGNvbW11bmljYXRvcl9vYmplY3RzIg4KDEN1c3Rv",
-            "bU91dHB1dCLNAgoOQWdlbnRJbmZvUHJvdG8SIgoac3RhY2tlZF92ZWN0b3Jf",
-            "b2JzZXJ2YXRpb24YASADKAISGwoTdmlzdWFsX29ic2VydmF0aW9ucxgCIAMo",
-            "DBIYChB0ZXh0X29ic2VydmF0aW9uGAMgASgJEh0KFXN0b3JlZF92ZWN0b3Jf",
-            "YWN0aW9ucxgEIAMoAhIbChNzdG9yZWRfdGV4dF9hY3Rpb25zGAUgASgJEhAK",
-            "CG1lbW9yaWVzGAYgAygCEg4KBnJld2FyZBgHIAEoAhIMCgRkb25lGAggASgI",
-            "EhgKEG1heF9zdGVwX3JlYWNoZWQYCSABKAgSCgoCaWQYCiABKAUSEwoLYWN0",
-            "aW9uX21hc2sYCyADKAgSOQoNY3VzdG9tX291dHB1dBgMIAEoCzIiLmNvbW11",
-            "bmljYXRvcl9vYmplY3RzLkN1c3RvbU91dHB1dEIfqgIcTUxBZ2VudHMuQ29t",
-            "bXVuaWNhdG9yT2JqZWN0c2IGcHJvdG8z"));
+            "Zm9fcHJvdG8ucHJvdG8SFGNvbW11bmljYXRvcl9vYmplY3RzIiUKDEN1c3Rv",
+            "bU91dHB1dBIVCg1idXR0b25fcHVzaGVkGAEgASgDIs0CCg5BZ2VudEluZm9Q",
+            "cm90bxIiChpzdGFja2VkX3ZlY3Rvcl9vYnNlcnZhdGlvbhgBIAMoAhIbChN2",
+            "aXN1YWxfb2JzZXJ2YXRpb25zGAIgAygMEhgKEHRleHRfb2JzZXJ2YXRpb24Y",
+            "AyABKAkSHQoVc3RvcmVkX3ZlY3Rvcl9hY3Rpb25zGAQgAygCEhsKE3N0b3Jl",
+            "ZF90ZXh0X2FjdGlvbnMYBSABKAkSEAoIbWVtb3JpZXMYBiADKAISDgoGcmV3",
+            "YXJkGAcgASgCEgwKBGRvbmUYCCABKAgSGAoQbWF4X3N0ZXBfcmVhY2hlZBgJ",
+            "IAEoCBIKCgJpZBgKIAEoBRITCgthY3Rpb25fbWFzaxgLIAMoCBI5Cg1jdXN0",
+            "b21fb3V0cHV0GAwgASgLMiIuY29tbXVuaWNhdG9yX29iamVjdHMuQ3VzdG9t",
+            "T3V0cHV0Qh+qAhxNTEFnZW50cy5Db21tdW5pY2F0b3JPYmplY3RzYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::MLAgents.CommunicatorObjects.CustomOutput), global::MLAgents.CommunicatorObjects.CustomOutput.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MLAgents.CommunicatorObjects.CustomOutput), global::MLAgents.CommunicatorObjects.CustomOutput.Parser, new[]{ "ButtonPushed" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MLAgents.CommunicatorObjects.AgentInfoProto), global::MLAgents.CommunicatorObjects.AgentInfoProto.Parser, new[]{ "StackedVectorObservation", "VisualObservations", "TextObservation", "StoredVectorActions", "StoredTextActions", "Memories", "Reward", "Done", "MaxStepReached", "Id", "ActionMask", "CustomOutput" }, null, null, null)
           }));
     }
@@ -71,12 +72,24 @@ namespace MLAgents.CommunicatorObjects {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CustomOutput(CustomOutput other) : this() {
+      buttonPushed_ = other.buttonPushed_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CustomOutput Clone() {
       return new CustomOutput(this);
+    }
+
+    /// <summary>Field number for the "button_pushed" field.</summary>
+    public const int ButtonPushedFieldNumber = 1;
+    private long buttonPushed_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long ButtonPushed {
+      get { return buttonPushed_; }
+      set {
+        buttonPushed_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -92,12 +105,14 @@ namespace MLAgents.CommunicatorObjects {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (ButtonPushed != other.ButtonPushed) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (ButtonPushed != 0L) hash ^= ButtonPushed.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -111,6 +126,10 @@ namespace MLAgents.CommunicatorObjects {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+      if (ButtonPushed != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(ButtonPushed);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -119,6 +138,9 @@ namespace MLAgents.CommunicatorObjects {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (ButtonPushed != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ButtonPushed);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -129,6 +151,9 @@ namespace MLAgents.CommunicatorObjects {
     public void MergeFrom(CustomOutput other) {
       if (other == null) {
         return;
+      }
+      if (other.ButtonPushed != 0L) {
+        ButtonPushed = other.ButtonPushed;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -141,6 +166,10 @@ namespace MLAgents.CommunicatorObjects {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 8: {
+            ButtonPushed = input.ReadInt64();
+            break;
+          }
         }
       }
     }

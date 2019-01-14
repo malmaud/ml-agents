@@ -4,6 +4,7 @@ option csharp_namespace = "MLAgents.CommunicatorObjects";
 package communicator_objects;
 
 message CustomOutput {
+    int64 button_pushed = 1;
 }
 
 message AgentInfoProto {

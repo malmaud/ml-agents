@@ -26,17 +26,24 @@ namespace MLAgents.CommunicatorObjects {
           string.Concat(
             "CkVtbGFnZW50cy9lbnZzL2NvbW11bmljYXRvcl9vYmplY3RzL2Vudmlyb25t",
             "ZW50X3BhcmFtZXRlcnNfcHJvdG8ucHJvdG8SFGNvbW11bmljYXRvcl9vYmpl",
-            "Y3RzIhIKEEN1c3RvbVBhcmFtZXRlcnMi+AEKGkVudmlyb25tZW50UGFyYW1l",
-            "dGVyc1Byb3RvEl8KEGZsb2F0X3BhcmFtZXRlcnMYASADKAsyRS5jb21tdW5p",
-            "Y2F0b3Jfb2JqZWN0cy5FbnZpcm9ubWVudFBhcmFtZXRlcnNQcm90by5GbG9h",
-            "dFBhcmFtZXRlcnNFbnRyeRJBChFjdXN0b21fcGFyYW1ldGVycxgCIAEoCzIm",
-            "LmNvbW11bmljYXRvcl9vYmplY3RzLkN1c3RvbVBhcmFtZXRlcnMaNgoURmxv",
-            "YXRQYXJhbWV0ZXJzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgC",
-            "OgI4AUIfqgIcTUxBZ2VudHMuQ29tbXVuaWNhdG9yT2JqZWN0c2IGcHJvdG8z"));
+            "Y3RzIigKBUNvbG9yEgkKAXIYASABKAISCQoBZxgCIAEoAhIJCgFiGAMgASgC",
+            "ImkKBkJ1dHRvbhIqCgVjb2xvchgBIAEoCzIbLmNvbW11bmljYXRvcl9vYmpl",
+            "Y3RzLkNvbG9yEgkKAXgYAiABKAISCQoBeRgDIAEoAhINCgV3aWR0aBgEIAEo",
+            "AhIOCgZoZWlnaHQYBSABKAIiQQoQQ3VzdG9tUGFyYW1ldGVycxItCgdidXR0",
+            "b25zGAEgAygLMhwuY29tbXVuaWNhdG9yX29iamVjdHMuQnV0dG9uIvgBChpF",
+            "bnZpcm9ubWVudFBhcmFtZXRlcnNQcm90bxJfChBmbG9hdF9wYXJhbWV0ZXJz",
+            "GAEgAygLMkUuY29tbXVuaWNhdG9yX29iamVjdHMuRW52aXJvbm1lbnRQYXJh",
+            "bWV0ZXJzUHJvdG8uRmxvYXRQYXJhbWV0ZXJzRW50cnkSQQoRY3VzdG9tX3Bh",
+            "cmFtZXRlcnMYAiABKAsyJi5jb21tdW5pY2F0b3Jfb2JqZWN0cy5DdXN0b21Q",
+            "YXJhbWV0ZXJzGjYKFEZsb2F0UGFyYW1ldGVyc0VudHJ5EgsKA2tleRgBIAEo",
+            "CRINCgV2YWx1ZRgCIAEoAjoCOAFCH6oCHE1MQWdlbnRzLkNvbW11bmljYXRv",
+            "ck9iamVjdHNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::MLAgents.CommunicatorObjects.CustomParameters), global::MLAgents.CommunicatorObjects.CustomParameters.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MLAgents.CommunicatorObjects.Color), global::MLAgents.CommunicatorObjects.Color.Parser, new[]{ "R", "G", "B" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MLAgents.CommunicatorObjects.Button), global::MLAgents.CommunicatorObjects.Button.Parser, new[]{ "Color", "X", "Y", "Width", "Height" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MLAgents.CommunicatorObjects.CustomParameters), global::MLAgents.CommunicatorObjects.CustomParameters.Parser, new[]{ "Buttons" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MLAgents.CommunicatorObjects.EnvironmentParametersProto), global::MLAgents.CommunicatorObjects.EnvironmentParametersProto.Parser, new[]{ "FloatParameters", "CustomParameters" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
@@ -44,6 +51,438 @@ namespace MLAgents.CommunicatorObjects {
 
   }
   #region Messages
+  public sealed partial class Color : pb::IMessage<Color> {
+    private static readonly pb::MessageParser<Color> _parser = new pb::MessageParser<Color>(() => new Color());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Color> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MLAgents.CommunicatorObjects.EnvironmentParametersProtoReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Color() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Color(Color other) : this() {
+      r_ = other.r_;
+      g_ = other.g_;
+      b_ = other.b_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Color Clone() {
+      return new Color(this);
+    }
+
+    /// <summary>Field number for the "r" field.</summary>
+    public const int RFieldNumber = 1;
+    private float r_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float R {
+      get { return r_; }
+      set {
+        r_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "g" field.</summary>
+    public const int GFieldNumber = 2;
+    private float g_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float G {
+      get { return g_; }
+      set {
+        g_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "b" field.</summary>
+    public const int BFieldNumber = 3;
+    private float b_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float B {
+      get { return b_; }
+      set {
+        b_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Color);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Color other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(R, other.R)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(G, other.G)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(B, other.B)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (R != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(R);
+      if (G != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(G);
+      if (B != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(B);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (R != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(R);
+      }
+      if (G != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(G);
+      }
+      if (B != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(B);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (R != 0F) {
+        size += 1 + 4;
+      }
+      if (G != 0F) {
+        size += 1 + 4;
+      }
+      if (B != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Color other) {
+      if (other == null) {
+        return;
+      }
+      if (other.R != 0F) {
+        R = other.R;
+      }
+      if (other.G != 0F) {
+        G = other.G;
+      }
+      if (other.B != 0F) {
+        B = other.B;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 13: {
+            R = input.ReadFloat();
+            break;
+          }
+          case 21: {
+            G = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            B = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class Button : pb::IMessage<Button> {
+    private static readonly pb::MessageParser<Button> _parser = new pb::MessageParser<Button>(() => new Button());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Button> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MLAgents.CommunicatorObjects.EnvironmentParametersProtoReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Button() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Button(Button other) : this() {
+      color_ = other.color_ != null ? other.color_.Clone() : null;
+      x_ = other.x_;
+      y_ = other.y_;
+      width_ = other.width_;
+      height_ = other.height_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Button Clone() {
+      return new Button(this);
+    }
+
+    /// <summary>Field number for the "color" field.</summary>
+    public const int ColorFieldNumber = 1;
+    private global::MLAgents.CommunicatorObjects.Color color_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MLAgents.CommunicatorObjects.Color Color {
+      get { return color_; }
+      set {
+        color_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "x" field.</summary>
+    public const int XFieldNumber = 2;
+    private float x_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float X {
+      get { return x_; }
+      set {
+        x_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "y" field.</summary>
+    public const int YFieldNumber = 3;
+    private float y_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Y {
+      get { return y_; }
+      set {
+        y_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "width" field.</summary>
+    public const int WidthFieldNumber = 4;
+    private float width_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Width {
+      get { return width_; }
+      set {
+        width_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "height" field.</summary>
+    public const int HeightFieldNumber = 5;
+    private float height_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Height {
+      get { return height_; }
+      set {
+        height_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Button);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Button other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Color, other.Color)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(X, other.X)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Y, other.Y)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Width, other.Width)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Height, other.Height)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (color_ != null) hash ^= Color.GetHashCode();
+      if (X != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(X);
+      if (Y != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Y);
+      if (Width != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Width);
+      if (Height != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Height);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (color_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Color);
+      }
+      if (X != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(X);
+      }
+      if (Y != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(Y);
+      }
+      if (Width != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(Width);
+      }
+      if (Height != 0F) {
+        output.WriteRawTag(45);
+        output.WriteFloat(Height);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (color_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Color);
+      }
+      if (X != 0F) {
+        size += 1 + 4;
+      }
+      if (Y != 0F) {
+        size += 1 + 4;
+      }
+      if (Width != 0F) {
+        size += 1 + 4;
+      }
+      if (Height != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Button other) {
+      if (other == null) {
+        return;
+      }
+      if (other.color_ != null) {
+        if (color_ == null) {
+          color_ = new global::MLAgents.CommunicatorObjects.Color();
+        }
+        Color.MergeFrom(other.Color);
+      }
+      if (other.X != 0F) {
+        X = other.X;
+      }
+      if (other.Y != 0F) {
+        Y = other.Y;
+      }
+      if (other.Width != 0F) {
+        Width = other.Width;
+      }
+      if (other.Height != 0F) {
+        Height = other.Height;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (color_ == null) {
+              color_ = new global::MLAgents.CommunicatorObjects.Color();
+            }
+            input.ReadMessage(color_);
+            break;
+          }
+          case 21: {
+            X = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            Y = input.ReadFloat();
+            break;
+          }
+          case 37: {
+            Width = input.ReadFloat();
+            break;
+          }
+          case 45: {
+            Height = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class CustomParameters : pb::IMessage<CustomParameters> {
     private static readonly pb::MessageParser<CustomParameters> _parser = new pb::MessageParser<CustomParameters>(() => new CustomParameters());
     private pb::UnknownFieldSet _unknownFields;
@@ -52,7 +491,7 @@ namespace MLAgents.CommunicatorObjects {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MLAgents.CommunicatorObjects.EnvironmentParametersProtoReflection.Descriptor.MessageTypes[0]; }
+      get { return global::MLAgents.CommunicatorObjects.EnvironmentParametersProtoReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -69,12 +508,23 @@ namespace MLAgents.CommunicatorObjects {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CustomParameters(CustomParameters other) : this() {
+      buttons_ = other.buttons_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CustomParameters Clone() {
       return new CustomParameters(this);
+    }
+
+    /// <summary>Field number for the "buttons" field.</summary>
+    public const int ButtonsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::MLAgents.CommunicatorObjects.Button> _repeated_buttons_codec
+        = pb::FieldCodec.ForMessage(10, global::MLAgents.CommunicatorObjects.Button.Parser);
+    private readonly pbc::RepeatedField<global::MLAgents.CommunicatorObjects.Button> buttons_ = new pbc::RepeatedField<global::MLAgents.CommunicatorObjects.Button>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::MLAgents.CommunicatorObjects.Button> Buttons {
+      get { return buttons_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -90,12 +540,14 @@ namespace MLAgents.CommunicatorObjects {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!buttons_.Equals(other.buttons_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= buttons_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -109,6 +561,7 @@ namespace MLAgents.CommunicatorObjects {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+      buttons_.WriteTo(output, _repeated_buttons_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -117,6 +570,7 @@ namespace MLAgents.CommunicatorObjects {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      size += buttons_.CalculateSize(_repeated_buttons_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -128,6 +582,7 @@ namespace MLAgents.CommunicatorObjects {
       if (other == null) {
         return;
       }
+      buttons_.Add(other.buttons_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -139,6 +594,10 @@ namespace MLAgents.CommunicatorObjects {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            buttons_.AddEntriesFrom(input, _repeated_buttons_codec);
+            break;
+          }
         }
       }
     }
@@ -153,7 +612,7 @@ namespace MLAgents.CommunicatorObjects {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MLAgents.CommunicatorObjects.EnvironmentParametersProtoReflection.Descriptor.MessageTypes[1]; }
+      get { return global::MLAgents.CommunicatorObjects.EnvironmentParametersProtoReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

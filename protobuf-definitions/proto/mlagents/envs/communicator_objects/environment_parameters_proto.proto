@@ -3,7 +3,22 @@ syntax = "proto3";
 option csharp_namespace = "MLAgents.CommunicatorObjects";
 package communicator_objects;
 
+message Color {
+    float r=1;
+    float g=2;
+    float b=3;
+}
+
+message Button {
+    Color color=1;
+    float x=2;
+    float y=3;
+    float width=4;
+    float height=5;
+}
+
 message CustomParameters {
+    repeated Button buttons = 1;
 }
 
 message EnvironmentParametersProto {
